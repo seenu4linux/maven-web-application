@@ -105,7 +105,7 @@
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>walmart-dev-snapshot Nexus Repository </name>
-	      <url>http://3.108.65.195:8081/repository/walmart-snapshot/
+	      <url>http://3.108.65.195:8081/repository/walmart-snapshot/</url>
 	    
 	</distributionManagement>
 	
