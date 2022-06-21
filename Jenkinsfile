@@ -1,7 +1,7 @@
 node{
    def MavenHome = tool name:"maven3.8.5"
    echo "Branch name is: ${env.BRANCH_NAME}"
-   echo "Workaspace name is" ${env.WORKSPACE}"
+  // echo "Workaspace name is" ${env.WORKSPACE}"
    echo "JOB name is: ${env.JOB_NAME}"
    echo "Build id is: ${env.BUILD_ID}"
    echo "Node name is: ${env.NODE_NAME}"
