@@ -1,10 +1,10 @@
 node{
    def MavenHome = tool name:"maven3.8.5"
-   echo "Branch name is: ${BRANCH_NAME}"
-   echo "Workaspace name is" ${WORKSPACE}"
-   echo "JOB name is: ${JOB_NAME}"
-   echo "Build id is: ${BUILD_ID}"
-   echo "Node name is: ${NODE_NAME}"
+   echo "Branch name is: ${env.BRANCH_NAME}"
+   echo "Workaspace name is" ${env.WORKSPACE}"
+   echo "JOB name is: ${env.JOB_NAME}"
+   echo "Build id is: ${env.BUILD_ID}"
+   echo "Node name is: ${env.NODE_NAME}"
    
    properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')), [$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([pollSCM('* * * * *')])])
    
