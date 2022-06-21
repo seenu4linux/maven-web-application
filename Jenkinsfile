@@ -1,6 +1,13 @@
 node{
    def MavenHome = tool name:"maven3.8.5"
+   echo "Branch name is: ${BRANCH_NAME}"
+   echo "Workaspace name is" ${WORKSPACE}"
+   echo "JOB name is: ${JOB_NAME}"
+   echo "Build id is: ${BUILD_ID}"
+   echo "Node name is: ${NODE_NAME}"
+   
    properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')), [$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([pollSCM('* * * * *')])])
+   
    
     stage('CheckOutCode'){
         git branch: 'development', credentialsId: 'a853e7f2-1117-44b2-a703-21d3f8dfe7d4', url: 'https://github.com/seenu4linux/maven-web-application.git'
