@@ -9,9 +9,11 @@ triggers {
 options {
   buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '3', daysToKeepStr: '', numToKeepStr: '3')
  //adding time stampls to the output
- timestamps
+// timestamps
 }
-
+options {
+  timestamps
+}
     stages{
         stage('gitCheckOutCode'){
             steps(){
