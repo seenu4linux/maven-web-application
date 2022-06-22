@@ -4,7 +4,9 @@ pipeline{
     tools {
   maven 'maven3.8.5'
 }
-
+triggers {
+  pollSCM '* * * * *'
+}
     stages{
         stage('gitCheckOutCode'){
             steps(){
